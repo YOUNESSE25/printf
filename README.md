@@ -1,1 +1,0 @@
-readme printf function
