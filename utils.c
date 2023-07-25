@@ -4,7 +4,7 @@
  * @c: char
  * Return: 1 or 0
  */
-int is _printable(char c)
+int is_printable(char c)
 {
 	if (c >= 32 && c < 127)
 		return (1);
@@ -19,7 +19,7 @@ int is _printable(char c)
  */
 int append_hexa_code(char ascii_code, char buffer[], int i)
 {
-	char map_to = "0123456789ABCDEF";
+	char map_to[] = "0123456789ABCDEF";
 
 	if (ascii_code < 0)
 		ascii_code *= -1;
