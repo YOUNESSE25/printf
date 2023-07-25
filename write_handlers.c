@@ -83,8 +83,7 @@ int write_number(int is_negative, int ind, char buffer[], int flags,
 int write_num(int ind, char buffer[], int flags, int width, int prec,
 		int length, char padd, char extra_c)
 {
-	int i;
-	int padd_start = 1;
+	int i, padd_start = 1;
 
 	if (prec == 0 && ind == BUFF_SIZE - 2 && buffer[ind] == '0' && width == 0)
 		return (0);
@@ -122,7 +121,7 @@ int write_num(int ind, char buffer[], int flags, int width, int prec,
 		}
 	}
 	if (extra_c)
-	buffer[--padd_start] = extra_c;
+		buffer[--ind] = extra_c;
 	return (write(1, &buffer[ind], length));
 	}
 /**
@@ -132,7 +131,7 @@ int write_num(int ind, char buffer[], int flags, int width, int prec,
  * @buffer: array of chars
  * @flags: flags speck
  * @width: width speck
- * @presion: precision speck
+ * @precision: precision speck
  * @size: size speck
  * Return: number of written chars
  */

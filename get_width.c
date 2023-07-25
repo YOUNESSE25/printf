@@ -26,9 +26,7 @@ int get_width(const char *format, int *i, va_list list)
 			break;
 		}
 		else
-		{
 			break;
-		}
 	}
 	*i = c - 1;
 	return (width);
